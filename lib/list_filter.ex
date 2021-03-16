@@ -8,8 +8,11 @@ defmodule ListFilter do
   defp count_odds(list) do
     numbers =
       Enum.map(list, fn elem ->
-        number = String.replace(elem, ~r/\D/, "0")
-        String.to_integer(number)
+        number =
+          String.replace(elem, ~r/\D/, "0")
+          |> String.to_integer()
+
+        number
       end)
 
     Enum.count(numbers, fn number ->

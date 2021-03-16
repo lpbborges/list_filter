@@ -9,7 +9,7 @@ defmodule ListFilterTest do
 
       expected_response = 3
 
-      assert_response = expected_response
+      assert response == expected_response
     end
   end
 end
